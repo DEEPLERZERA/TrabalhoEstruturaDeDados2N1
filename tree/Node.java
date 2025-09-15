@@ -1,3 +1,5 @@
+//Daniel Borges Valentim - 10427564
+//João Vitor Golfieri Mendonça - 10434460
 package tree;
 
 public class Node<E extends Comparable<E>> {
