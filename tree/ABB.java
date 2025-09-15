@@ -25,7 +25,7 @@ public class ABB<E extends Comparable<E>> implements BST<E> {
         int cmp = value.compareTo(node.getValue());
         if (cmp < 0) node.setFilhoEsq(inserirRec(node.getFilhoEsq(), value));
         else if (cmp > 0) node.setFilhoDir(inserirRec(node.getFilhoDir(), value));
-        // se cmp == 0, já tratamos acima (não insere); aqui apenas retorna node
+        // se cmp == 0, já tratamos acima (não insere), aqui apenas retorna node
         return node;
     }
 
