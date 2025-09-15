@@ -1,7 +1,7 @@
-package edu.mack.apl1.io;
+package io;
 
-import edu.mack.apl1.model.Servidor;
-import edu.mack.apl1.repo.RepositorioServidores;
+import model.Servidor;
+import repo.RepositorioServidores;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

@@ -1,4 +1,4 @@
-package edu.mack.apl1.tree;
+package tree;
 
 public class Node<E extends Comparable<E>> {
     private E value;

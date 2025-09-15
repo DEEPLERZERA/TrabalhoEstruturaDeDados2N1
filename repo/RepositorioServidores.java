@@ -1,7 +1,7 @@
-package edu.mack.apl1.repo;
+package repo;
 
-import edu.mack.apl1.model.Servidor;
-import edu.mack.apl1.tree.BST;
+import model.Servidor;
+import tree.BST;
 
 public class RepositorioServidores {
     private final BST<Servidor> arvore;

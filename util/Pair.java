@@ -1,3 +1,3 @@
-package edu.mack.apl1.util;
+package util;
 
 public record Pair<A,B>(A first, B second) {}

@@ -1,8 +1,8 @@
-package edu.mack.apl1.service;
+package service;
 
-import edu.mack.apl1.model.Servidor;
-import edu.mack.apl1.tree.BST;
-import edu.mack.apl1.util.Pair;
+import model.Servidor;
+import tree.BST;
+import util.Pair;
 
 import java.util.*;
 import java.util.function.Consumer;

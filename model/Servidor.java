@@ -1,4 +1,4 @@
-package edu.mack.apl1.model;
+package model;
 
 import java.util.Objects;
 

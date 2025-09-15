@@ -1,13 +1,13 @@
-package edu.mack.apl1.app;
+package app;
 
-import edu.mack.apl1.io.CsvMapper;
-import edu.mack.apl1.io.CsvSaver;
-import edu.mack.apl1.model.Servidor;
-import edu.mack.apl1.repo.RepositorioServidores;
-import edu.mack.apl1.service.Analytics;
-import edu.mack.apl1.tree.BST;
-import edu.mack.apl1.tree.ABB;
-import edu.mack.apl1.util.Pair;
+import io.CsvMapper;
+import io.CsvSaver;
+import model.Servidor;
+import repo.RepositorioServidores;
+import service.Analytics;
+import tree.BST;
+import tree.ABB;
+import util.Pair;
 
 import java.io.IOException;
 import java.util.*;
