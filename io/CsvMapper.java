@@ -8,6 +8,7 @@ import repo.RepositorioServidores;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+//Classe para mapear CSV e carregar dados na árvore
 public class CsvMapper {
     public static int carregar(String caminho, RepositorioServidores repo) throws IOException {
         int inseridos = 0, pulados = 0;
@@ -22,6 +23,7 @@ public class CsvMapper {
                 String cBase  = d[1].trim();
                 String cCom   = d[2].trim();
                 double remun;
+                //Tenta converter remuneração
                 try {
                     remun = Double.parseDouble(d[3].trim().replace(".", "").replace(",", "."));
                 } catch (NumberFormatException e) { pulados++; continue; }

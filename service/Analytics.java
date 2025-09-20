@@ -9,8 +9,9 @@ import util.Pair;
 import java.util.*;
 import java.util.function.Consumer;
 
+//Classe que oferece funcionalidades analíticas sobre os servidores
 public class Analytics {
-
+    //Retorna o servidor com menor e maior salário
     public static Pair<Servidor,Servidor> extremosSalario(BST<Servidor> arv) {
         final Servidor[] min = {null}, max = {null};
         arv.preOrder(s -> {
@@ -20,6 +21,7 @@ public class Analytics {
         return new Pair<>(min[0], max[0]);
     }
 
+    //Calcula o total gasto com servidores que possuem um cargo específico
     public static double totalPorCargo(BST<Servidor> arv, String cargoAlvo) {
         String alvo = cargoAlvo == null ? "" : cargoAlvo.trim().toLowerCase();
         final double[] total = {0};
@@ -31,6 +33,7 @@ public class Analytics {
         return total[0];
     }
 
+    //Retorna os N servidores com maior salário
     public static List<Servidor> topN(BST<Servidor> arv, int n) {
         PriorityQueue<Servidor> pq = new PriorityQueue<>(Comparator.comparingDouble(Servidor::getRemuneracaoBruta));
         arv.postOrder(s -> {
@@ -42,12 +45,14 @@ public class Analytics {
         return out;
     }
 
+    //Calcula o gasto total por unidade
     public static Map<String, Double> gastoPorUnidade(BST<Servidor> arv) {
         Map<String, Double> mapa = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         arv.inOrder(s -> mapa.merge(s.getUnidade(), s.getRemuneracaoBruta(), Double::sum));
         return mapa;
     }
-
+    
+    //Calcula a distribuição de servidores por jornada
     public static Map<String, Long> distribuicaoPorJornada(BST<Servidor> arv) {
         Map<String, Long> mapa = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         arv.preOrder(s -> mapa.merge(s.getJornada(), 1L, Long::sum));

@@ -4,6 +4,7 @@ package model;
 
 import java.util.Objects;
 
+//Classe que representa um servidor público
 public class Servidor implements Comparable<Servidor> {
     private final String nome;
     private final String cargoBase;

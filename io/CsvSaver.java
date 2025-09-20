@@ -9,8 +9,10 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
+//Classe para salvar dados da árvore em CSV
 public class CsvSaver {
     public static void salvar(String caminho, BST<Servidor> arvore) throws IOException {
+        //Escreve arquivo CSV
         try (BufferedWriter bw = new BufferedWriter(
                 new OutputStreamWriter(new FileOutputStream(caminho), StandardCharsets.UTF_8))) {
             bw.write("Nome Completo;Cargo Base;Cargo em Comissão;Remuneração Bruta;Unidade;Jornada\n");

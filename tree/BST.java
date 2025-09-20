@@ -4,6 +4,7 @@ package tree;
 
 import java.util.function.Consumer;
 
+//Interface para árvore binária de busca
 public interface BST<T extends Comparable<T>> {
     boolean insert(T value);
     boolean remove(T value);

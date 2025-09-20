@@ -2,6 +2,7 @@
 //João Vitor Golfieri Mendonça - 10434460
 package tree;
 
+//Classe que representa um nó em uma árvore binária de busca
 public class Node<E extends Comparable<E>> {
     private E value;
     private Node<E> filhoEsq;

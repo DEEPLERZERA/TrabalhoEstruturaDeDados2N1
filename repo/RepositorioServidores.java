@@ -5,6 +5,7 @@ package repo;
 import model.Servidor;
 import tree.BST;
 
+//Classe que gerencia o repositório de servidores usando uma árvore binária de busca
 public class RepositorioServidores {
     private final BST<Servidor> arvore;
 

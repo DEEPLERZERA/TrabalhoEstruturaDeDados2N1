@@ -14,7 +14,9 @@ import util.Pair;
 import java.io.IOException;
 import java.util.*;
 
+//Classe principal com menu interativo
 public class Main {
+    //Cria ABB
     static BST<Servidor> criarSuaABB() {
         return new ABB<>();
     }
@@ -23,6 +25,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         RepositorioServidores repo = new RepositorioServidores(criarSuaABB());
 
+        //Menu principal
         while (true) {
             System.out.println("""
                 === Apl1 – ABB + Exploração de Dados ===
@@ -56,6 +59,7 @@ public class Main {
         }
     }
 
+    //Função para inserir um novo funcionário
     static void inserir(Scanner sc, RepositorioServidores repo) {
         System.out.print("Nome: "); String nome = sc.nextLine();
         System.out.print("Cargo Base: "); String cb = sc.nextLine();
@@ -68,11 +72,13 @@ public class Main {
         System.out.println(ok ? "Inserido." : "Nome duplicado (ignorado).");
     }
 
+    //Função para remover um funcionário pelo nome
     static void remover(Scanner sc, RepositorioServidores repo) {
         System.out.print("Nome para remover: ");
         System.out.println(repo.removerPorNome(sc.nextLine()) ? "Removido." : "Nome não encontrado.");
     }
 
+    //Submenu para análises
     static void submenuAnalises(Scanner sc, RepositorioServidores repo) {
         System.out.println("""
             --- Análises ---
